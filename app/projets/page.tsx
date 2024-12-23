@@ -1,11 +1,9 @@
 import { Navbar } from '@/components/navbar'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import Link from 'next/link'
 import getProjects from "@/datas/datas";
 
 const projects = getProjects();
-
 
 export default function Projects() {
     return (
@@ -15,25 +13,17 @@ export default function Projects() {
                 <h1 className="text-3xl font-bold mb-6">Mes Projets</h1>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {projects.map((project) => (
-                        <Card key={project.id}>
+                        <Card key={project.id} className="bg-[#A5B4FC]">
                             <CardHeader>
-                                <CardTitle>{project.title}</CardTitle>
+                                <CardTitle className="text-black">{project.title}</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <CardDescription className="mb-4">{project.description}</CardDescription>
+                                <CardDescription className="mb-4 text-black">{project.description}</CardDescription>
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {project.technologies.map((tech) => (
                                         <Badge key={tech} variant="secondary">{tech}</Badge>
                                     ))}
                                 </div>
-                                <Link
-                                    href={project.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-blue-500 hover:underline"
-                                >
-                                    Voir le projet
-                                </Link>
                             </CardContent>
                         </Card>
                     ))}
@@ -42,4 +32,3 @@ export default function Projects() {
         </div>
     )
 }
-
