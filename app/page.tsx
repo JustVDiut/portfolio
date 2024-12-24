@@ -4,9 +4,13 @@ import {Navbar} from "@/components/navbar";
 import Link from "next/link";
 import getProjects from "@/datas/datas";
 import Image from 'next/image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 
-const projects = getProjects();
+
+const projects = getProjects().slice(0, 3);
 
 export default function Home() {
     return (
@@ -39,7 +43,8 @@ export default function Home() {
                                         <CardTitle className="dark:text-black">{project.title}</CardTitle>
                                     </CardHeader>
                                     <CardContent>
-                                        <CardDescription className="dark:text-black">{project.description}</CardDescription>
+                                        <CardDescription
+                                            className="dark:text-black">{project.description}</CardDescription>
                                     </CardContent>
                                 </Card>
                             </Link>
@@ -51,7 +56,8 @@ export default function Home() {
                     <h2 className="text-2xl font-semibold mb-4">Capacités techniques</h2>
                     <div className="flex flex-wrap gap-2">
                         {["HTML / CSS", "SQL / PostgreSQL", "JAVA", "Python", "C ++", "PHP / Laravel", "Angular / Typescript / JS", "Git", "Docker", "VBA Excel"].map((skill) => (
-                            <Badge key={skill} variant="secondary" className="bg-[#A5B4FC] dark:text-black">{skill}</Badge>
+                            <Badge key={skill} variant="secondary"
+                                   className="bg-[#A5B4FC] dark:text-black">{skill}</Badge>
                         ))}
                     </div>
                 </section>
@@ -60,7 +66,8 @@ export default function Home() {
                     <h2 className="text-2xl font-semibold mb-4">Capacités personnelles</h2>
                     <div className="flex flex-wrap gap-2">
                         {["Travail d'équipe", "Résolution de problèmes", "Communication", "Adaptabilité", "Gestion du temps"].map((skill) => (
-                            <Badge key={skill} variant="secondary" className="bg-[#A5B4FC] dark:text-black">{skill}</Badge>
+                            <Badge key={skill} variant="secondary"
+                                   className="bg-[#A5B4FC] dark:text-black">{skill}</Badge>
                         ))}
                     </div>
                 </section>
@@ -109,8 +116,22 @@ export default function Home() {
                 </section>
             </main>
 
-            <footer className="text-center p-6 text-gray-600 dark:text-gray-400">
-                © {new Date().getFullYear()} Just Vallin--Détrez. Tous droits réservés.
+            <footer className="text-left p-6 text-gray-600 dark:text-black bg-[#A5B4FC]">
+                <div className="flex items-center space-x-4">
+                    <a href="mailto:your-email@example.com" className="text-gray-600 dark:text-black">
+                        <FontAwesomeIcon icon={faEnvelope} size="lg"/>
+                    </a>
+                    <a href="https://github.com/your-github-username" className="text-gray-600 dark:text-black">
+                        <FontAwesomeIcon icon={faGithub} size="lg"/>
+                    </a>
+                    <a href="https://www.linkedin.com/in/your-linkedin-username"
+                       className="text-gray-600 dark:text-black">
+                        <FontAwesomeIcon icon={faLinkedin} size="lg"/>
+                    </a>
+                </div>
+                <p className="mt-4">
+                    © {new Date().getFullYear()} Just Vallin--Détrez. Tous droits réservés.
+                </p>
             </footer>
         </div>
     )
