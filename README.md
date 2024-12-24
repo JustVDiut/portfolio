@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mémoire : L’intérêt de Next.js pour un site éco-responsable et les bonnes pratiques mises en œuvre
 
-## Getting Started
+## 1. Intérêt de Next.js pour un site éco-responsable
+### 1.1 Rendu côté serveur (SSR) optimisé
+Next.js propose un rendu côté serveur qui permet de générer les pages à la demande et d’éviter de servir du contenu inutile. Cela réduit l’empreinte carbone des sites web en minimisant les ressources chargées par les utilisateurs.
 
-First, run the development server:
+### 1.2 Pré-rendu statique (SSG)
+Avec le pré-rendu statique, les pages sont générées à l’avance et servies comme des fichiers statiques, réduisant la consommation énergétique et les temps de chargement. Cela diminue également la charge sur les serveurs.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 1.3 Optimisation automatique des performances
+Next.js inclut des outils comme l’optimisation des images et la minification du code JavaScript, ce qui permet de réduire la taille des ressources à télécharger. Cela contribue à une consommation énergétique moindre lors du chargement des pages.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 1.4 Utilisation de CDN (Content Delivery Network)
+Next.js intègre facilement des CDN pour distribuer les fichiers statiques à proximité des utilisateurs finaux. Cela réduit les distances parcourues par les données, diminuant les émissions liées au transfert de données.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1.5 Framework moderne et communauté engagée
+La communauté Next.js soutient activement les solutions éco-responsables en proposant des extensions et des pratiques visant à améliorer l’efficacité énergétique des sites web.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 2. Bonnes pratiques mises en œuvre dans le cadre de votre site
+### 2.1 Optimisation des images
+L’utilisation du composant Image de Next.js garantit une optimisation automatique des images (échelle adaptée, chargement progressif), ce qui réduit le volume de données transférées.
 
-## Learn More
+### 2.2 Design adaptatif et minimaliste
+Le site présente une interface épurée avec un design réactif adapté à tous les appareils, évitant le gaspillage de ressources pour des fonctionnalités superflues.
 
-To learn more about Next.js, take a look at the following resources:
+### 2.3 Chargement des données à la demande
+L’utilisation du rendu côté serveur (SSR) et du pré-rendu statique (SSG) limite le transfert de données inutiles, optimisant les performances et réduisant l’impact environnemental.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 2.4 Accessibilité accrue
+Des pratiques telles que l’utilisation de balises sémantiques et l’intégration d’attributs comme alt pour les images assurent une meilleure accessibilité, évitant ainsi des charges de travail supplémentaires pour les utilisateurs handicapés.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 2.5 Code modularisé et maintenable
+La création de composants réutilisables et la séparation logique des différentes parties du site améliorent la maintenabilité et limitent le gaspillage de ressources lors des mises à jour ou des corrections.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
