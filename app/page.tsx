@@ -1,14 +1,15 @@
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card"
-import {Badge} from "@/components/ui/badge"
-import {Navbar} from "@/components/navbar";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Navbar } from "@/components/navbar";
 import Link from "next/link";
 import getProjects from "@/datas/datas";
-import Image from 'next/image'
+import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-
-
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false;
 
 const projects = getProjects().slice(0, 3);
 
@@ -115,24 +116,25 @@ export default function Home() {
                     </div>
                 </section>
             </main>
-
-            <footer className="text-left p-6 text-gray-600 dark:text-black bg-[#A5B4FC]">
-                <div className="flex items-center space-x-4">
-                    <a href="mailto:your-email@example.com" className="text-gray-600 dark:text-black">
-                        <FontAwesomeIcon icon={faEnvelope} size="lg"/>
-                    </a>
-                    <a href="https://github.com/your-github-username" className="text-gray-600 dark:text-black">
-                        <FontAwesomeIcon icon={faGithub} size="lg"/>
-                    </a>
-                    <a href="https://www.linkedin.com/in/your-linkedin-username"
-                       className="text-gray-600 dark:text-black">
-                        <FontAwesomeIcon icon={faLinkedin} size="lg"/>
-                    </a>
+            <footer className="p-6 text-gray-600 dark:text-black bg-[#A5B4FC]">
+                <div className="flex justify-between items-center">
+                    <p className="text-left">
+                        © {new Date().getFullYear()} Just Vallin--Détrez. Tous droits réservés.
+                    </p>
+                    <div className="flex justify-center space-x-4">
+                        <a href="mailto:j.vallindetrez@gmail.com" className="text-gray-600 dark:text-black">
+                            <FontAwesomeIcon icon={faEnvelope} size="lg"/>
+                        </a>
+                        <a href="https://github.com/JustVDiut" className="text-gray-600 dark:text-black">
+                            <FontAwesomeIcon icon={faGithub} size="lg"/>
+                        </a>
+                        <a href="https://www.linkedin.com/in/just-vallin-d%C3%A9trez-066518253/"
+                           className="text-gray-600 dark:text-black">
+                            <FontAwesomeIcon icon={faLinkedin} size="lg"/>
+                        </a>
+                    </div>
                 </div>
-                <p className="mt-4">
-                    © {new Date().getFullYear()} Just Vallin--Détrez. Tous droits réservés.
-                </p>
             </footer>
         </div>
-    )
+    );
 }

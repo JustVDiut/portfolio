@@ -1,6 +1,7 @@
 "use client"
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { cn } from "@/lib/utils"
 import ModeToggle from "@/components/theme";
@@ -19,9 +20,15 @@ export function Navbar() {
         <nav className="bg-[#A5B4FC] dark:bg-[#A5B4FC] shadow-md">
             <div className="container mx-auto px-6 py-3">
                 <div className="flex justify-between items-center">
-                    <Link href="/" className="text-lg font-semibold text-black dark:text-white">
-                        Just Vallin--Détrez
-                    </Link>
+                  <Link href="/">
+                      <Image
+                          src="/logo.png"
+                          alt="Logo"
+                          width={50}
+                          height={50}
+                          className="object-contain"
+                      />
+                  </Link>
                     <div className="flex space-x-4">
                         {navItems.map((item) => (
                             <Link
