@@ -9,20 +9,20 @@ export default function APropos() {
                 <h1 className="text-3xl font-bold mb-6">À propos de moi</h1>
                 <div className="bg-[#A5B4FC] rounded-lg shadow-md p-6">
                     <p className="text-gray-700 dark:text-black mb-4">
-                        Bonjour et bienvenue sur mon Portfolio ! Je m'appelle Just, étudiant en troisième année de BUT
+                        Bonjour et bienvenue sur mon Portfolio ! Je m&#39;appelle Just, étudiant en troisième année de BUT
                         informatique, passionné de programmation et par les nouvelles technologies.
                     </p>
                     <p className="text-gray-700 dark:text-black mb-4">
-                        Je possède déjà des compétences en programmation et en développement web, ainsi qu'une forte
-                        motivation à apprendre et à me perfectionner dans ces domaines en constante évolution. J'ai
+                        Je possède déjà des compétences en programmation et en développement web, ainsi qu&#39;une forte
+                        motivation à apprendre et à me perfectionner dans ces domaines en constante évolution. J&#39;ai
                         acquis plusieurs certifications OpenClassrooms qui attestent de mes compétences. Je possède
                         également un esprit analytique et une capacité à résoudre les problèmes.
                     </p>
                     <p className="text-gray-700 dark:text-black mb-4">
-                        En tant que personne sociable et dynamique, j'aime travailler en équipe et partager mes idées
+                        En tant que personne sociable et dynamique, j&#39;aime travailler en équipe et partager mes idées
                         pour créer des solutions innovantes et répondre à certains besoins. Je suis également rigoureux,
                         organisé et prêt à relever de nouveaux défis pour continuer à évoluer dans ma carrière.
-                        N'hésitez pas à me contacter pour discuter !
+                        N&#39;hésitez pas à me contacter pour discuter !
                     </p>
                 </div>
                 <div className="flex justify-center mt-4">
